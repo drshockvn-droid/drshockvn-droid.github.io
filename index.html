@@ -10,7 +10,7 @@
 <meta property="og:title" content="Dr.Shock VN – Bác sĩ phuộc nhún và gầm xe">
 <meta property="og:description" content="Nâng cấp phuộc chỉnh nấc, sửa gầm, bảo dưỡng tổng quát. Đặt lịch lắp đặt tại xưởng Bình Tân, TP.HCM.">
 <meta property="og:image" content="https://drshockvn-droid.github.io/logo.png">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#121212">
 <link rel="icon" href="logo.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"AutoRepair","name":"Dr.Shock VN","legalName":"Công ty TNHH Dr.Shock VN","url":"https://drshockvn-droid.github.io/","logo":"https://drshockvn-droid.github.io/logo.png","telephone":["+84356795954","+84798089886"],
@@ -18,7 +18,7 @@
 "sameAs":["https://www.facebook.com/drshockvn"],"areaServed":"VN"}
 </script>
 <style>
-:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0;font:14px system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
 img{max-width:100%}
 [hidden]{display:none!important}
@@ -29,12 +29,18 @@ img{max-width:100%}
 <style>
 /* Layout: phiếu khám của "bác sĩ phuộc" — hero chẩn đoán triệu chứng bên trái, cây phuộc nhún bên phải; các phần sau là dải ngang rộng, bảng thương hiệu canh theo số tháng bảo hành. */
 :root{
-  --bg:#ffffff; --surface:#f5f5f3; --ink:#141414; --muted:#5d5d5a; --line:#dbdbd7;
-  --petrol:#c41f00; --spring:#e22d08; --spring-ink:#ffffff; --hot:#ff8a00; --band:#f5f5f3; --band-ink:#141414; --band-muted:#5d5d5a;
+  --bg:#f4f4f2; --surface:#ffffff; --ink:#141414; --muted:#5d5d5a; --line:#dbdbd7;
+  --petrol:#c41f00; --spring:#e22d08; --spring-ink:#ffffff; --hot:#ff8a00; --band:#101010; --band-ink:#f3f3f1; --band-muted:#a8a8a4;
   --promo-a:#a81800; --promo-b:#d63c00; --promo-dark:#121212; --promo-ink:#ffffff; --promo-muted:#cfcfca; --hero-line:#3a3a38; --asphalt:#1a1a1a; --lane:#f5c400;
   --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
   --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
 }
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d0d0d; --surface:#181818; --ink:#f1f1ee; --muted:#a3a39f; --line:#2f2f2d;
+  --petrol:#ff6a3d; --spring:#ee3a12; --spring-ink:#ffffff; --hot:#ff9a1a; --band:#1b1b1b; --band-ink:#f3f3f1; --band-muted:#a8a8a4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d0d0d; --surface:#181818; --ink:#f1f1ee; --muted:#a3a39f; --line:#2f2f2d;
+  --petrol:#ff6a3d; --spring:#ee3a12; --spring-ink:#ffffff; --hot:#ff9a1a; --band:#1b1b1b; --band-ink:#f3f3f1; --band-muted:#a8a8a4; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -144,7 +150,7 @@ td.mo{white-space:nowrap;font-family:var(--display);font-size:1.35rem;font-weigh
 .book .lead{color:var(--band-muted)}
 .book .eyebrow{color:var(--band-muted)}
 .steps{margin:24px 0 0;padding:0 0 0 20px;color:var(--band-muted);display:grid;gap:8px;font-size:.95rem}
-form,.done{background:var(--bg);border:1px solid var(--line);color:var(--ink);padding:24px;display:grid;gap:16px;min-width:0}
+form,.done{background:var(--surface);color:var(--ink);padding:24px;display:grid;gap:16px;min-width:0}
 .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 label{display:grid;gap:6px;font-size:.88rem;font-weight:600}
 input,select,textarea{font:400 1rem var(--body);padding:11px 12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:2px;width:100%;min-width:0}
@@ -167,9 +173,9 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
 footer .wrap{padding-block:20px 84px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 
 /* hero banner (always dark) */
-.hero{position:relative;overflow:hidden;background:var(--bg);color:var(--ink)}
-.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(55% 75% at 82% 35%,rgba(226,45,8,.10),transparent 70%),repeating-linear-gradient(115deg,transparent 0 70px,rgba(226,45,8,.04) 70px 74px)}
-.hero .bolt{position:absolute;right:4%;top:0;height:100%;width:auto;pointer-events:none;opacity:.14}
+.hero{position:relative;overflow:hidden;background:var(--promo-dark);color:var(--promo-ink);--ink:var(--promo-ink);--muted:var(--promo-muted);--line:var(--hero-line)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(55% 75% at 82% 35%,rgba(226,45,8,.38),transparent 70%),repeating-linear-gradient(115deg,transparent 0 70px,rgba(255,138,0,.05) 70px 74px)}
+.hero .bolt{position:absolute;right:4%;top:0;height:100%;width:auto;pointer-events:none;opacity:.22}
 .hero .wrap{position:relative;z-index:1;padding-block:48px 8px}
 .road{position:relative;z-index:1;height:214px;background:var(--asphalt);border-top:3px solid var(--hero-line);overflow:hidden}
 .road::after{content:"";position:absolute;left:0;right:0;bottom:12px;height:6px;background:repeating-linear-gradient(90deg,var(--lane) 0 60px,transparent 60px 120px);animation:lane .5s linear infinite}
